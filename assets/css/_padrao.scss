@@ -2,6 +2,19 @@
 $branco: #ffffff;
 $preto: #000000;
 $cinza: #787A7A;
+$roxo-escuro: #3d348b;
+$roxo-claro: #7678ed;
+$amarelo: #f7b801;
+$amarelo-queimado: #f18701;
+$laranja: #f35b04;
+
+
+//ETIQUETAS COLORIDAS 
+.tag1 {background-color: $roxo-escuro;}
+.tag2 {background-color: $roxo-claro;}
+.tag3 {background-color: $amarelo;}
+.tag4 {background-color: $amarelo-queimado;}
+.tag5 {background-color: $laranja;}
 
 //FONTES
 $fonte: 'Rubik', sans-serif;
@@ -47,7 +60,8 @@ h1 {
     padding: 35px 0 10px 0;
 }
 
-h2 {font-size:  2em;
+h2 {
+    font-size: 2em;
     font-weight: 700;
     padding: 15px 0 10px 0;
 
@@ -77,7 +91,7 @@ section {
 //FOOTER
 
 footer {
-    margin: 10px;
+    margin: 20px;
     background-color: $cinza;
     border-radius: 20px;
     color: $branco;
@@ -86,8 +100,21 @@ footer {
     flex-direction: column;
     justify-content: center;
     gap: 2em;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transform: translateZ(0); 
+    will-change: transform; 
 
-    p {font-size: 1.2em;
+    span {
+        font-size: 1em;
+        font-weight: 300;
+        margin-top: 30px;
+
+    }
+
+    p {
+        font-size: 1.2em;
         font-weight: 400;
         margin: 0px;
     }
@@ -95,7 +122,7 @@ footer {
     a {
         font-size: 2em;
         font-weight: 800;
-        
+
     }
 
     .rede-sociais {
@@ -104,10 +131,41 @@ footer {
         gap: 0.7em;
         margin-top: 10px;
 
-        img {
-            width: 40px;
+        a {
+            img {
+                width: 40px;
+
+            }
+            &:hover {
+                transition: 0.3s;
+                transform: translateY(-4px);
+            }
         }
+
+
     }
 
 
 }
+
+ footer:before {
+        content: "OPEN TO WORK · OPEN TO WORK · OPEN TO WORK · OPEN TO WORK · OPEN TO WORK · OPEN TO WORK "; 
+        position: absolute;
+        left: 50%; 
+        padding: 5px ; 
+        background-color: $preto; 
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em; 
+        text-align: center;
+        white-space: nowrap; 
+        transform: rotate(-19deg); 
+        transform-origin: center; 
+        z-index: 1; 
+    }
+
+    p {
+        position: relative; 
+        z-index: 2;
+        margin-top: 0; 
+    }

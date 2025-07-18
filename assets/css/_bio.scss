@@ -1,0 +1,15 @@
+.bio {
+    background-color: $cinza;
+    border-radius: 20px;
+    margin: 20px;
+    color: $branco;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    justify-content: start;
+    align-items: start;
+
+    img { width: 500px;
+        border-radius: 20px;
+    }
+}
