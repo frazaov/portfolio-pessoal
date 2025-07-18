@@ -1,0 +1,113 @@
+//CORES
+$branco: #ffffff;
+$preto: #000000;
+$cinza: #787A7A;
+
+//FONTES
+$fonte: 'Rubik', sans-serif;
+$fonte-especial: 'Rubik Spray Paint', sans-serif;
+
+//TAMANHO DE TELAS
+$container: 920px;
+$tablet: 700px;
+$celular: 540px;
+
+//BODY
+body {
+    font-size: 17px;
+    font-family: $fonte;
+    line-height: 1.2;
+    background-color: $branco;
+    color: $preto;
+}
+
+//CONTAINER
+.container {
+    padding: 10px;
+    margin: 0 auto;
+    width: $container;
+
+    @media (max-width: $container) {
+        width: 100%;
+    }
+
+    @media (max-width: $tablet) {
+        width: 100%;
+    }
+
+    @media (max-width: $celular) {
+        width: 100%;
+    }
+}
+
+//TITULOS 
+h1 {
+    font-size: 3em;
+    font-weight: 900;
+    padding: 35px 0 10px 0;
+}
+
+h2 {font-size:  2em;
+    font-weight: 700;
+    padding: 15px 0 10px 0;
+
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 15px 0 10px 0;
+}
+
+//PARAGRAFO
+
+p {
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+//SECTION
+
+section {
+    padding: 20px;
+}
+
+//FOOTER
+
+footer {
+    margin: 10px;
+    background-color: $cinza;
+    border-radius: 20px;
+    color: $branco;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+
+    p {font-size: 1.2em;
+        font-weight: 400;
+        margin: 0px;
+    }
+
+    a {
+        font-size: 2em;
+        font-weight: 800;
+        
+    }
+
+    .rede-sociais {
+        display: flex;
+        flex-direction: row;
+        gap: 0.7em;
+        margin-top: 10px;
+
+        img {
+            width: 40px;
+        }
+    }
+
+
+}
