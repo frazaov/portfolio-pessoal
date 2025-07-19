@@ -19,25 +19,13 @@
 }
 
 
-/* --- Container do Grid: .grade-projeto --- */
+
 .grid-projeto {
     display: grid;
-    /*
-     * Define as colunas do grid. A chave para o sangramento está aqui.
-     *
-     * `[area-sangra-start]` e `[area-sangra-end]` são linhas nomeadas que representam as bordas da tela.
-     * `calc(-1 * var(--padding-secao, 20px))` compensa o padding da .secao-projeto,
-     * fazendo com que o grid comece e termine *fora* desse padding.
-     *
-     * `[conteudo-grid-start]` e `[conteudo-grid-end]` são as linhas que definem a área das 12 colunas normais.
-     */
     grid-template-columns: [area-sangra-start] calc(-1 * var(--padding-secao, 20px)) [conteudo-grid-start] repeat(12, 1fr) [conteudo-grid-end] calc(-1 * var(--padding-secao, 20px)) [area-sangra-end];
-
-    gap: 20px; /* Espaçamento padrão entre as colunas e linhas internas do grid */
-    max-width: none; /* Permite que a grade se estenda para a largura total do contêiner pai */
-    margin: 0; /* Remove margens padrão que poderiam impedir o sangramento */
-
-    /* Variável CSS para o padding da seção, fácil de ajustar */
+    gap: 20px; 
+    max-width: none; 
+    margin: 0; 
     --padding-secao: 20px;
 
     .descricao {
@@ -53,21 +41,12 @@ padding-left: 20px;
     }
 }
 
-/* --- Estilo Padrão para Itens do Projeto --- */
 .item-projeto {
-    /* Por padrão, um item comum vai ocupar todas as 12 colunas dentro da área de conteúdo normal */
     grid-column: conteudo-grid-start / conteudo-grid-end;
-    /* Adicione estilos de base para seus itens aqui (ex: background, padding interno, etc.) */
-    padding: 15px; /* Padding interno para o conteúdo de cada item */
-    background-color: #ffffff; /* Fundo branco para os itens normais */
-}
+    padding: 15px; 
+    background-color: #ffffff; 
 
-/* --- Classes de LARGURA (Column Spanning) --- */
-/*
-   Essas classes fazem o elemento ocupar 'X' número de colunas.
-   Elas são aplicadas DENTRO da área `[conteudo-grid-start] / [conteudo-grid-end]`.
-   Ex: <div class="item-projeto col-6">...</div>
-*/
+/* --- Classes de LARGURA --- */
 .col-1 { grid-column: span 1; }
 .col-2 { grid-column: span 2; }
 .col-3 { grid-column: span 3; }
@@ -81,13 +60,6 @@ padding-left: 20px;
 .col-11 { grid-column: span 11; }
 .col-12 { grid-column: span 12; }
 
-/* --- Classes Combinadas: INÍCIO E LARGURA (start-col-Y-span-X) --- */
-/*
-   Estas são as classes mais poderosas para posicionamento preciso.
-   Elas definem onde o item COMEÇA (coluna Y) e quantas colunas ele OCUPA (span X).
-   A sintaxe é `grid-column: [coluna-inicial] / span [numero-de-colunas];`
-   Ex: <div class="item-projeto start-col-3-span-8">...</div>
-*/
 /* Combinações para Start Column 1 */
 .start-col-1-span-1 { grid-column: 1 / span 1; }
 .start-col-1-span-2 { grid-column: 1 / span 2; }
@@ -158,37 +130,31 @@ padding-left: 20px;
 .start-col-5-span-11 { grid-column: 5 / span 11; }
 .start-col-5-span-12 { grid-column: 5 / span 12; }
 
-/* ... (Continue criando as combinações para Start Columns 4 a 12, conforme sua necessidade) ... */
-/* Apenas crie as que você realmente planeja usar para não inchar seu CSS. */
 
-
-/* --- Classe para Elementos que "SANGRARÃO" (Burlando o Padding da Section) --- */
+/* --- Classe para Elementos que "SANGRARÃO" --- */
 .sangra-secao {
-    /* Ocupa da linha externa de início até a linha externa de fim */
     grid-column: area-sangra-start / area-sangra-end;
-    /* Remove o padding interno do .item-projeto para este caso */
     padding: 0;
-    border-radius: 0; /* Remove borda arredondada se sangrar */
-    box-shadow: none; /* Remove sombra se sangrar */
-    background-color: transparent; /* Remove fundo branco */
+    border-radius: 0; 
+    box-shadow: none;
+    background-color: transparent;
 }
 
 /* --- Estilos para Imagens e Vídeos --- */
-/* Para imagens dentro de qualquer .item-projeto */
 .item-projeto img {
     max-width: 100%;
     height: auto;
     display: block;
-    object-fit: cover; /* Faz a imagem cobrir o espaço disponível */
-    border-radius: inherit; /* Herda a borda do pai, ou 0 para .sangra-secao */
-    min-height: 200px; /* Altura mínima para o object-fit ter efeito */
+    object-fit: cover; 
+    border-radius: inherit; 
+    min-height: 200px; 
 }
 
 /* Contêiner de Vídeo Responsivo (para manter proporção 16:9) */
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Para proporção 16:9 */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     background-color: #000;
@@ -204,34 +170,31 @@ padding-left: 20px;
     border: 0;
 }
 
-/* --- Media Queries para Responsividade (Mobile First) --- */
+
 @media (max-width: $tablet) {
-    /* Ajusta o padding da section para mobile */
     .secao-projeto {
-        padding: 15px; /* Menor padding para telas pequenas */
+        padding: 15px; 
     }
 
-    /* Redefine o grid principal para 1 coluna em mobile */
     .grade-projeto {
-        grid-template-columns: 1fr; /* Uma única coluna */
-        gap: 15px; /* Ajusta o gap */
-        /* Remove a lógica de colunas nomeadas negativas para mobile, pois não será usada */
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    /* Reset de todos os itens do grid para ocuparem a largura total em mobile */
+
     .item-projeto,
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
     .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
-    .start-col-1-span-1, .start-col-1-span-2, /* ... todas as start-col-Y-span-X ... */
+    .start-col-1-span-1, .start-col-1-span-2, .start-col-1-span-3, .start-col-1-span-4, .start-col-1-span-5, .start-col-1-span-6, .start-col-1-span-7, .start-col-1-span-8, .start-col-1-span-9, .start-col-1-span-10, .start-col-1-span-11, .start-col-1-span-12, .start-col-2-span-1, .start-col-2-span-2, .start-col-1-span-3, .start-col-1-span-4, /*tem que mencionar o resto*/
     .sangra-secao {
-        grid-column: 1 / span 1; /* Todos ocupam 1 coluna */
-        padding: 15px; /* Padding interno para itens em mobile */
-        border-radius: 8px; /* Mantém borda arredondada em mobile */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Mantém sombra em mobile */
-        background-color: #ffffff; /* Fundo branco em mobile */
+        grid-column: 1 / span 1; 
+        padding: 15px; 
+        border-radius: 8px; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        background-color: #ffffff; 
     }
 
-    /* Exceção: itens de imagem/vídeo que sangram não precisam de padding interno em mobile */
+    
     .sangra-secao img,
     .sangra-secao .video-container {
         padding: 0;
@@ -240,8 +203,9 @@ padding-left: 20px;
     }
 
     .item-projeto img {
-        min-height: 150px; /* Ajusta altura mínima da imagem para mobile */
+        min-height: 150px; 
     }
+}
 }
 
 .borda {
