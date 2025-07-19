@@ -1,7 +1,11 @@
 //CORES
 $branco: #ffffff;
 $preto: #000000;
+$cinza-claro: #dbdede;
+$cinza-medio-claro: #a4a7a7;
 $cinza: #787A7A;
+$cinza-medio-escuro: #505151;
+$cinza-escuro: #1e1e1e;
 $roxo-escuro: #3d348b;
 $roxo-claro: #7678ed;
 $amarelo: #f7b801;
@@ -91,8 +95,8 @@ section {
 //FOOTER
 
 footer {
-    margin: 20px;
-    background-color: $cinza;
+    margin: 20px 20px 0px 20px;
+    background-color: $cinza-escuro;
     border-radius: 20px;
     color: $branco;
     padding: 20px 20px 20px 20px;
@@ -164,8 +168,21 @@ footer {
         z-index: 1; 
     }
 
+    .credits {
+        margin-top: 6px;
+        p { font-size: 0.8em;
+            color: $cinza;
+            font-weight: 400;
+            text-align: center;
+            padding: 0px;
+            margin-bottom: 6px;
+        }
+    }
+
     p {
         position: relative; 
         z-index: 2;
         margin-top: 0; 
     }
+
+    .sem-padding {padding: 0px;}
