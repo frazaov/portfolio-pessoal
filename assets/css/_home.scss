@@ -47,15 +47,26 @@
     margin-left: 20px;
     mix-blend-mode:difference;
 
-    h1 {
+    .marca-font {
         font-family: $fonte-especial;
         color: $branco;
         font-size: 3em;
         font-weight: 300;
         line-height: 0.9em;
         padding: 0;
+        transition: font-size 0.3s ease-in-out;
         
     }
+
+    .marca-font-pequena {
+         font-family: $fonte-especial;
+        color: $branco;
+        font-weight: 300;
+        line-height: 0.9em;
+        padding: 0;
+        transition: font-size 0.3s ease-in-out;
+    font-size: 1.5em !important;
+}
 }
 
 .marca-projetos {
@@ -144,3 +155,5 @@
     }
 
 }
+
+.padding {padding: 20px;}

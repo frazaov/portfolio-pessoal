@@ -38,6 +38,10 @@ body {
     color: $preto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 //CONTAINER
 .container {
     padding: 10px;
@@ -90,6 +94,26 @@ p {
 
 section {
     padding: 20px;
+
+    .sem-padding {
+        padding: 0px;
+    }
+}
+
+// ESTILIZAÇÃO DE IMAGENSE VIDEOS
+.borda {
+                border-radius: 20px;
+            }
+
+figcaption {
+                font-size: 0.8em;
+                font-style: italic;
+                font-weight: 300;
+                margin-top: 10px;
+            }
+
+video {
+    width: 100%;
 }
 
 //FOOTER
