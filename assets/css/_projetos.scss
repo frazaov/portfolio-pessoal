@@ -56,6 +56,7 @@
             margin-left: auto;
             margin-right: auto;
             margin-bottom: var(--row-gap);
+            padding: 0px 20px;
             &:last-child{
                 margin-bottom: 0;
             }
@@ -119,9 +120,14 @@
     h3 {font-size: 1.2em;
         font-weight: 400;
         padding: 0;
+
+         @media (max-width: $tablet) {
+            font-size: 0.7em;}
     }
 
     h1 {font-size: 1.5em;
         padding: 0;
+        @media (max-width: $tablet) {
+            font-size: 0.8em;}
     }
 }

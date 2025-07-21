@@ -66,12 +66,15 @@ h1 {
     font-size: 3em;
     font-weight: 900;
     padding: 35px 0 10px 0;
+
+     @media (max-width: $tablet) { font-size: 2.5em;}
 }
 
 h2 {
     font-size: 2em;
     font-weight: 700;
     padding: 15px 0 10px 0;
+    @media (max-width: $tablet) { font-size: 1.5em;}
 
 }
 
@@ -150,6 +153,9 @@ footer {
     a {
         font-size: 2em;
         font-weight: 800;
+
+         @media (max-width: $tablet) { font-size: 1.4em;}
+
 
     }
 

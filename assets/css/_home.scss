@@ -17,6 +17,15 @@
     a {font-weight: 500;
     font-size: 1.3em;}
 
+    @media (max-width: $tablet) {
+        a {
+            font-size: 0.9em;
+        }
+        p {
+            font-size: 0.9em;
+        }
+    }
+
 }
 
 .subcapa {
@@ -34,6 +43,15 @@
 
     a {font-weight: 500;
     font-size: 1.3em;}
+
+     @media (max-width: $tablet) {
+        a {
+            font-size: 0.9em;
+        }
+        p {
+            font-size: 0.9em;
+        }
+    }
 
 
 }
@@ -117,6 +135,8 @@
         border-bottom: 1px solid $cinza;
         margin-top: 20px;
         padding: 0;
+
+        @media (max-width: $tablet) { font-size: 2.5em;}
     }
 
     .descricao {
