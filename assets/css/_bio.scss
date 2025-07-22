@@ -61,8 +61,10 @@ height: 300px;  }
         @media (max-width: $container) {
 
             grid-column: 1 / -1;
+            grid-row: 1;
             grid-template-columns: 1fr; 
     grid-template-rows: auto; 
+    min-height: 150px;
         }
 
 
