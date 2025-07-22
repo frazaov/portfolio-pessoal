@@ -1,6 +1,6 @@
 .bio {
     padding: 0px 20px;
-    color: $branco;
+    color: $cinza-escuro;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -14,7 +14,7 @@
     }
 
     .quadro1 {
-        background-image: url('../img/perfil.png');
+        background-image: url('../img/perfil.jpeg');
         background-size: cover;
         padding: 20px;
         border-radius: 20px;
@@ -28,7 +28,7 @@ height: 300px;  }
     }
 
     .bio-text {
-        background-color: $cinza-medio-claro;
+        background-color: $cinza-claro;
         padding: 20px;
         border-radius: 20px;
         grid-column: span 2 / span 2;
@@ -42,7 +42,7 @@ height: 300px;  }
         }
 
         p {
-            color: $branco;
+            color: $cinza-medio-escuro;
             font-size: 0.9em;
             font-weight: 400;
             margin: 0px 0px 0px 0px;
@@ -50,7 +50,7 @@ height: 300px;  }
     }
 
     .quadro2 {
-        background-color: $cinza;
+        background-color: $cinza-claro;
         padding: 20px;
         border-radius: 20px;
         grid-column-start: 3;
@@ -76,7 +76,7 @@ height: 300px;  }
     }
 
     .quadro3 {
-        background-color: $cinza;
+        background-color: $cinza-claro;
         padding: 20px;
         border-radius: 20px;
         grid-column-start: 3;
@@ -108,7 +108,7 @@ height: 300px;  }
     }
 
     .quadro4 {
-        background-color: $cinza-medio-escuro;
+        background-color: $cinza-claro;
         padding: 20px;
         border-radius: 20px;
         grid-column-start: 4;
@@ -141,6 +141,7 @@ height: 300px;  }
                 max-width: 250px;
                 max-height: 250px;
                 display: block;
+                mix-blend-mode: difference;
             }
 
 
@@ -162,7 +163,7 @@ height: 300px;  }
     }
 
     .quadro5 {
-        background-color: $cinza;
+        background-color: $cinza-claro;
         padding: 20px;
         border-radius: 20px;
         grid-column: span 2 / span 2;
@@ -183,11 +184,12 @@ height: 300px;  }
 
         .desc {
             margin-bottom: 20px;
+            font-size: 0.8em;
         }
     }
 
     .quadro6 {
-        background-color: $cinza-medio-escuro;
+        background-color: $cinza-claro;
         padding: 20px;
         border-radius: 20px;
         grid-column-start: 5;
@@ -205,15 +207,15 @@ height: 300px;  }
         /* Estilos para a mini-grid dos apps */
         .grid-de-apps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+            gap: 7px;
             justify-content: space-between;
             align-content: space-between;
         }
 
         .grid-de-apps img {
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             object-fit: contain;
             transition: transform 0.2s ease-in-out;
             filter: grayscale(100%);
@@ -292,5 +294,9 @@ span.tooltip:hover:before {
     .desc {
         font-size: 0.9em;
         margin-bottom: 0px;
+    }
+
+    .quadro1,.bio-text, .quadro2, .quadro3, .quadro4, .quadro5, .quadro6 {
+        box-shadow: rgba(0,0,0,.02) 0px 1px 3px 0px,rgba(27,31,35,.15) 0px 0px 0px 1px;
     }
 }
