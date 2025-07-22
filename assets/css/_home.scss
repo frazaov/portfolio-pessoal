@@ -12,6 +12,7 @@
         font-size: 1.1em;
         font-weight: 500;
         margin: 0;
+        transition: opacity 0.3s ease-in-out;
     }
 
     a {font-weight: 500;
@@ -23,6 +24,7 @@
         }
         p {
             font-size: 0.9em;
+            
         }
     }
 
@@ -39,6 +41,7 @@
         font-size: 1.1em;
         font-weight: 500;
         margin: 0;
+        transition: opacity 0.3s ease-in-out;
     }
 
     a {font-weight: 500;
@@ -54,6 +57,15 @@
     }
 
 
+}
+
+.texto-escondivel {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.escondido {
+    opacity: 0;
+    pointer-events: none; 
 }
 
 //MARCA 
@@ -89,20 +101,17 @@
 
 .marca-projetos {
     position: fixed;
-    z-index: 99999;
     margin-top: 20px;
     margin-left: 20px;
-    
-
-    h1 {
-        font-family: $fonte-especial;
-        color: $preto;
+    mix-blend-mode: difference;
+    z-index: 999;
+    font-family: $fonte-especial;
+        color: $branco;
         font-size: 1.5em;
         font-weight: 300;
         line-height: 0.9em;
         padding: 0;
-        
-    }
+    
 }
 
 .projetos {
