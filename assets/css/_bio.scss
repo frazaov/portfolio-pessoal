@@ -210,16 +210,18 @@ height: 300px;  }
             height: 38px;
             object-fit: contain;
             transition: transform 0.2s ease-in-out;
+            filter: grayscale(100%);
         }
 
         .grid-de-apps img:hover {
             transform: scale(1.1);
+            filter: grayscale(0%);
         }
 
         span.tooltip {
   text-decoration: none;
   transition: all 0.4s ease;
-  -webkit-transition: all .4s ease;
+  -webkit-transition: all .9s ease;
   padding: 0px;
   position: relative;
 }
@@ -237,7 +239,7 @@ span.tooltip:before {
   bottom: -40px;
   //width: 250px;
   opacity: 0;
-  transition: all .4s ease;
+  transition: all .9s ease;
   z-index: 9;
 }
 span.tooltip:after {
