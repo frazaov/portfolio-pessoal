@@ -45,7 +45,19 @@
     }
 
     a {font-weight: 500;
-    font-size: 1.1em;}
+    font-size: 1.1em;
+    transition: all 0.3s ease-in-out; 
+}
+
+.link-fixo-top {
+    position: fixed;
+    top: 12px; 
+    right: 0px; 
+    z-index: 1000; 
+    padding: 10px 15px;
+    mix-blend-mode: difference;
+    color: $branco;
+}
 
      @media (max-width: $tablet) {
         a {
@@ -96,6 +108,12 @@
         padding: 0;
         transition: font-size 0.3s ease-in-out;
     font-size: 1.5em !important;
+}
+.crossfade-out {
+    opacity: 0; }
+
+.crossfade-in {
+    opacity: 1;
 }
 }
 
