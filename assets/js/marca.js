@@ -73,7 +73,7 @@ window.addEventListener('scroll', function() {
     if (linkFixo) { 
         // Define o ponto de gatilho para o link fixo
         // O link fixará quando o scroll ultrapassar 100px do topo da página.
-        const triggerFixarLink = 500; 
+        const triggerFixarLink = 580; 
 
         // Se a posição de rolagem for maior ou igual ao trigger (100px)
         // E o link ainda não tem a classe 'link-fixo-top'
