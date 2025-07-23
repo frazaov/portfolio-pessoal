@@ -27,8 +27,8 @@
 
 .grid-projeto {
     --n-col: 12;
-    --column-gap: 1.5rem;
-    --row-gap: 1.5rem;
+    --column-gap: 3.5rem;
+    --row-gap: 3.5rem;
     display: grid;
     grid-template-columns: repeat(var(--n-col), 1fr);
     gap: var(--row-gap) var(--column-gap);

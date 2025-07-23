@@ -87,7 +87,7 @@ h3 {
 //PARAGRAFO
 
 p {
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: 300;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -111,9 +111,10 @@ section {
     }
 }
 
-// ESTILIZAÇÃO DE IMAGENSE VIDEOS
+// ESTILIZAÇÃO DE IMAGENS E VIDEOS
 .borda {
                 border-radius: 20px;
+                box-sizing: border-box;
             }
 
 figcaption {
