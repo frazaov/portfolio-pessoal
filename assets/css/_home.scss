@@ -9,10 +9,11 @@
     align-items: flex-end;
 
     p { width: 50%;
-        font-size: 1.1em;
+        font-size: 1.8em;
         font-weight: 500;
         margin: 0;
         transition: opacity 0.3s ease-in-out;
+        text-wrap: wrap;
     }
 
     a {font-weight: 500;
@@ -38,9 +39,10 @@
     align-items: flex-start;
 
     p { width: 50%;
-        font-size: 1.1em;
+        font-size: 1.8em;
         font-weight: 500;
         margin: 0;
+        text-wrap: wrap;
         transition: opacity 0.3s ease-in-out;
     }
 
@@ -73,7 +75,10 @@
 
 .texto-escondivel {
     transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+     
 }
+
 
 .escondido {
     opacity: 0;

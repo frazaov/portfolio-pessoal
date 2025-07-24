@@ -47,6 +47,35 @@ height: 300px;  }
             font-weight: 400;
             margin: 0px 0px 0px 0px;
         }
+
+        h1 { font-weight: 600;
+            font-size: 1em;
+            color: $cinza-medio-escuro;
+            margin: 20px 0px 10px 0px;
+        }
+
+        ul { display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            li{color: $preto;
+            font-size: 0.8em;
+            font-weight: 400;
+            border-radius: 5px;
+            text-wrap: nowrap;
+            padding: 5px;
+            margin: 0px 8px 8px 0px;
+            text-transform: uppercase;
+
+            }
+        }
+
+        blockquote {
+            color: $cinza-medio-escuro;
+            font-size: 0.9em;
+            font-weight: 400;
+            font-style: italic;
+            margin-top: 20px;
+        }
     }
 
     .quadro2 {
@@ -233,6 +262,7 @@ height: 300px;  }
   position: relative;
 }
 span.tooltip:before {
+    display: none;
   content: attr(data-title);
   background-color: $branco;
   color: $preto;
@@ -250,6 +280,7 @@ span.tooltip:before {
   z-index: 9;
 }
 span.tooltip:after {
+    display: none;
   content: "";
   position: absolute;
   opacity: 0;
