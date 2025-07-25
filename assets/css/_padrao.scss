@@ -243,6 +243,10 @@ footer {
   justify-content: center;
   align-items: center;
   transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+
+  @media (max-width: $tablet) { background-color: none; opacity:0;}
+
+
 }
 
 

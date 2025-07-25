@@ -48,7 +48,7 @@
 
     a {font-weight: 500;
     font-size: 1.1em;
-    transition: all 0.3s ease-in-out; 
+    //transition: all 0.3s ease-in-out; 
 }
 
 .link-fixo-top {
@@ -190,13 +190,15 @@
         p {
             font-weight: 400;
             font-size: 1.1em;
-              @media (max-width: $tablet) {
+             @media (max-width: $tablet) {
+                display: none;
             
         }
+             
         }
 
         .grid {
-            p {
+            p { display: block;
                 border-bottom: 1px solid $cinza;
                 text-transform: uppercase;
                 padding-bottom: 8px;
