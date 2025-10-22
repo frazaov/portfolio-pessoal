@@ -1,0 +1,350 @@
+// PADRÃO PARA TODAS AS SEÇÕES 
+.secoes {
+    padding: 40px;
+    width: 100%;
+    height: 100vh;
+
+    .indicador {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+
+
+/// SEÇÃO 1
+.primeira {
+    background-color: $preto;
+    color: $branco;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 { font-size: 6em;
+        font-weight: 700;
+        margin-bottom: 80px;
+        margin-top: 100px;
+
+    }
+
+    h2 { font-family: $fonte;
+        font-size: 1em;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+     .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+        font-size: 188px;
+      }
+      
+      .botao-marca { display: flex;
+        justify-content: start;
+    .botao {
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      
+
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+        font-size: 45px;
+      }
+    }
+  }
+}
+
+/// SEÇÃO 2
+.segunda {
+    background-color: $branco;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $preto;
+   
+
+    .container { display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    }
+
+    figure {
+        width: 80%;
+        height: 80%;
+        margin-bottom: 100px;
+    }
+
+
+    p { font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1em;
+        text-align: center;
+    }
+}
+
+// SEÇÃO 3
+.terceiro {
+    background-image: url('/qora/media/moodboard.png');
+    background-size: cover;
+    background-position: center center;
+    color: $branco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 10vw;
+        font-weight: 600;
+        text-align: center;
+    }
+
+
+}
+
+//SEÇÃO 4
+
+.quarto {
+     background-image: url('/qora/media/marca-grid.png');
+    background-size: cover;
+    background-position: center center;
+    
+
+}
+
+//SEÇÃO 4/2
+
+#quartoemeio {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image 1s linear;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 550px;
+    }
+
+
+ p {
+    color: $vermelho;
+    font-size: 22px;
+    font-weight: 400;
+     overflow: hidden;
+  border-right: 2px solid $vermelho;
+  animation: typing-cursor 0.5s step-end infinite;
+ }
+
+}
+
+
+//SEÇÃO 5
+
+.quinto { background-color: $vermelho;
+
+    video {
+    position: relative; 
+    height: 100%;     
+    width: 100%;
+    overflow: hidden;
+    mix-blend-mode:screen;
+    
+    }
+
+    
+
+}
+
+
+//SEÇÃO 6
+
+.sexto {
+     background-image: url('/qora/media/fundo-brand.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+.grid{
+    --n-col: 12;
+    --column-gap: 1.5rem;
+    --row-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(var(--n-col), 1fr);
+    gap: var(--row-gap) var(--column-gap);
+    align-items: start;
+    height: 100%;
+    justify-content: center;
+    & > *{
+        grid-column-end: span 12;
+    }
+    @for $i from 1 to 12{
+        & > .largura-#{$i}{
+            grid-column-end: span $i;
+        }
+
+        & > .altura-#{$i}{
+            grid-row-end: span $i;
+        }
+
+        & > .coluna-#{$i}{
+            grid-column-start: $i;
+        }
+
+        & > .linha-#{$i}{
+            grid-row-start: $i;
+        }
+    }
+
+}
+
+ p {
+    color: $vermelho;
+    font-size: 22px;
+    font-weight: 400;
+     overflow: hidden;
+  border-right: 2px solid $vermelho;
+  animation: typing-cursor 0.5s step-end infinite;
+ }
+
+ @keyframes typing-cursor {
+  from { border-right-color: transparent; }
+  to { border-right-color: black; }
+}
+
+}
+
+// SEÇÃO 7
+.setima {
+    background-color: $branco;
+    border-bottom: 1px solid $preto;
+    border-top: 1px solid $preto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    padding: 0px;
+
+    h1 {
+        font-size: 3.5em;
+        font-weight: 600;
+    }
+    
+    .desc {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .paleta {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr;
+        justify-content: center;
+        border-left: 1px solid $preto;
+
+        .vermelho {background-color: $vermelho; padding: 20px;
+        p {
+            color: $branco;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.7em;
+        }}
+        .preto {background-color: $preto;
+        padding: 20px;
+        p {
+            color: $branco;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.7em;
+        }}
+        .branco {background-color: white;
+        padding: 20px;
+        p {
+            color: $preto;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.7em;
+        }}
+    }
+}
+
+// SEÇÃO 8
+.oitava {
+    background-color: $branco;
+    border-bottom: 1px solid $preto;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 0px;
+    align-content: stretch;
+
+     h1 {
+        font-size: 3.5em;
+        font-weight: 600;
+    }
+    
+    .desc {
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .variacoes-marca {
+        background-color: $vermelho;
+        border-right: 1px solid $preto;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+
+        img {
+            width: 1000px;
+        }
+    }
+
+
+}
+
+//SEÇÃO NONA
+.nona {
+    background-image: url('/qora/media/mockup-instagram.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+//SEÇÃO DÉCIMA
+.decima {
+     background-image: url('/qora/media/tipografia.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+//SEÇÃO DÉCIMA PRIMEIRA
+.decima-primeira {
+     background-image: url('/qora/media/mockup-camisa.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+//SEÇÃO DÉCIMA SEGUNDA
+.decima-segunda {
+     background-image: url('/qora/media/mockup-paper.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+//SEÇÃO DÉCIMA TERCEIRA
+.decima-terceira {
+     background-image: url('/qora/media/mockup-site.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+

@@ -1,0 +1,49 @@
+.capa {
+  background-color: #1a1a1a;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .titulo-botao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 4em;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  .ficha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .direitos {
+    width: 40%;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .botao-home {
+    .botao {
+      color: white;
+
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+        font-size: 88px;
+      }
+    }
+  }
+}

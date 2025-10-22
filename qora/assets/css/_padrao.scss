@@ -1,0 +1,73 @@
+//CORES
+$preto: #1a1a1a;
+$branco: #f5f5f5;
+$vermelho: #e70e02;
+
+//FONTES
+
+$fonte: "Roboto", sans-serif;
+$font-titulo: "Alte Haas Grotesk", sans-serif;
+
+
+//TAMANHO DE TELAS
+$container: 920px;
+$tablet: 700px;
+$celular: 540px;
+
+
+//BODY
+
+body {
+    font-family: $fonte;
+    font-size: 20px;
+    background-color: $branco;
+}
+
+
+//CONTAINER (espaço de área útil)
+
+
+//FOOTER
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $preto;
+    padding-block: 10em;
+
+    img{
+        width: 60px;
+    }
+
+    p {color: $branco;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 20px;
+    }
+
+    span {display: block;
+        font-size: 0.8em;
+        font-weight: 200;
+        color: $branco;
+        text-align: center;
+
+        strong {
+            font-weight: 400;
+        }
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-titulo;
+}
+
+//NEGRITO
+strong {
+    font-weight: 700;
+}
+
+
+//TÍTULOS
