@@ -116,6 +116,16 @@
 
 }
 
+//SEÇÃO 4/1
+.quartoporum {
+     background-image: url('/qora/media/marca.png');
+    background-size: cover;
+    background-position: center center;
+    
+
+}
+
+
 //SEÇÃO 4/2
 
 #quartoemeio {
@@ -125,11 +135,12 @@
     transition: background-image 1s linear;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
+    padding: 60px;
 
     img {
-        width: 550px;
+        width: 120px;
     }
 
 
