@@ -85,7 +85,7 @@ setTimeout(() => {
 
 
 // 1. Encontra o elemento de vídeo no HTML
-const video = document.getElementById('motion');
+const video = document.getElementById('');
 
 // 2. Define as opções do observador
 const options = {
