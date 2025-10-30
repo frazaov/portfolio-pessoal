@@ -48,39 +48,6 @@ const endPoint = rect.top + rect.height - offsetFim;
     }
   });
 
-  // Array com os links das imagens
-const backgroundImages = [
-  'url("../qora/media/quatroemeio-01.png")',
-  'url("../qora/media/quatroemeio-02.png")',
-  'url("../qora/media/quatroemeio-03.png")'
-];
-
-let currentIndex = 0;
-const section = document.getElementById('quartoemeio');
-
-// --- Nova função de pré-carregamento ---
-function preloadImages(urls) {
-  urls.forEach(url => {
-    const img = new Image();
-    img.src = url.replace(/url\(['"](.+)['"]\)/, '$1'); // Extrai o URL do formato 'url("...")'
-  });
-}
-
-// Chama a função de pré-carregamento antes de começar o slideshow
-preloadImages(backgroundImages);
-
-// Função para trocar a imagem de fundo
-function changeBackground() {
-  section.style.backgroundImage = backgroundImages[currentIndex];
-  currentIndex = (currentIndex + 1) % backgroundImages.length;
-}
-
-// Inicia o slideshow após um pequeno atraso,
-// para dar tempo do navegador pré-carregar as imagens
-setTimeout(() => {
-    changeBackground();
-    setInterval(changeBackground, 3000);
-}, 500); // Atraso de 0.5 segundos para garantir que o pré-carregamento começou
 
 
 
